@@ -1,0 +1,48 @@
+mariadb:
+  image: mariadb
+  ports:
+    - 3306:3306
+  environment:
+    MYSQL_ROOT_PASSWORD: root
+    MYSQL_DATABASE: ps17
+    MYSQL_USER: docker
+    MYSQL_PASSWORD: docker
+
+prestashop:
+  image: prestashop/prestashop:1.7-7.0
+  links:
+    - mariadb:mysql
+  volumes:
+   - ./themes:/var/www/html/themes
+   - ./modules:/var/www/html/modules
+   - ./override:/var/www/html/override
+   - ./logs:/var/log
+   - ./logs/php-fpm:/var/log/php-fpm
+  ports:
+   - "80:80"
+  environment:
+    DB_SERVER: mysql
+    DB_NAME: ps17
+    DB_USER: docker
+    DB_PASSWD: docker
+    PS_LANGUAGE: es
+    PS_COUNTRY: gb
+    PS_DEV_MODE: 1
+    PS_FOLDER_ADMIN: admin-dev
+    PS_FOLDER_INSTALL: install-dev
+    PS_INSTALL_AUTO: 1
+    PS_DOMAIN: prestashop.loc
+    PS_HANDLE_DYNAMIC_DOMAIN: 1
+    ADMIN_PASSWD: admin@admin.by
+    ADMIN_MAIL: admin@admin.by
+
+# phpmyadmin:
+#   image: phpmyadmin/phpmyadmin
+#   ports:
+#     - 8080:80
+#   links:
+#     - mariadb:mysql
+#   environment:
+#     - PMA_HOST=mysql
+#     - PMA_USER=root
+#     - PMA_PASSWORD=root
