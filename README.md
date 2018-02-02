@@ -1,6 +1,6 @@
-# PrestaShop Classic Theme Example hot module replacement, webpack.config.js - for webpack 3.x version.
+# 🎉 PrestaShop Classic Theme Example hot module replacement, webpack.config.js - for webpack 3.x version.
 
-**Help attract attention! send a [tweet](https://twitter.com/jlongster) with an appeal to update the [monkey-hot-loader](https://github.com/jlongster/monkey-hot-loader) to the latest version of webpack**
+🔥 **Help attract attention! send a [tweet](https://twitter.com/jlongster) with an appeal to update the [monkey-hot-loader](https://github.com/jlongster/monkey-hot-loader) to the latest version of webpack** 💋
 
 Based on Prestashop 1.7.2.4
 
@@ -36,19 +36,21 @@ yarn watch # or npm run watch
 
 ## Changes (step by step)
 
-### Updates
+### 📈 Updates
 
 `webpack@2` => `webpack@3`
+
+`babel-loader@6` => `babel-loader@7`
 
 `extract-text-webpack-plugin@2` => `extract-text-webpack-plugin@3`
 
 ##### Install
 
 ```bash
-yarn add -D webpack@3 extract-text-webpack-plugin@3
+yarn add -D webpack@3 extract-text-webpack-plugin@3 babel-loader@7
 ```
 
-### Added new
+### 🆕 Added new
 
 #### `browser-sync-dev-hot-webpack-plugin`
 
@@ -77,14 +79,14 @@ yarn add -D browser-sync-dev-hot-webpack-plugin browser-sync@2 bs-html-injector@
 yarn add -D webpack-dev-middleware@2 webpack-hot-middleware@2 webpack-merge cross-env
 
 # Optional
-yarn add -D  webpack-bundle-analyzer hard-source-webpack-plugin node-object-hash del
+yarn add -D babel-core@6 webpack-bundle-analyzer hard-source-webpack-plugin node-object-hash del
 ```
 
 #### Added [multi config](https://github.com/retyui/prestashop-1.7-webpack-3-hot-module-replacement/tree/master/themes/classic-demo-hot/_dev/_webpack) which is [combined depending on NODE_ENV](https://github.com/retyui/prestashop-1.7-webpack-3-hot-module-replacement/blob/master/themes/classic-demo-hot/_dev/webpack.config.js)
 
 #### [Updated scripts](https://github.com/retyui/prestashop-1.7-webpack-3-hot-module-replacement/blob/master/themes/classic-demo-hot/_dev/package.json#L7-L8) in `package.json`
 
-### Other
+### 🆘 Other
 
 [Example Hot Module Replacement for `Webpack 1.x` Prestashop 1.7](https://github.com/retyui/prestashop-1.7-webpack-hot-module-replacement)
 
