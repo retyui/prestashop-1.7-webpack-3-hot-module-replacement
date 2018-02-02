@@ -42,7 +42,7 @@ yarn watch # or npm run watch
 
 `extract-text-webpack-plugin@2` => `extract-text-webpack-plugin@3`
 
-#### Install
+##### Install
 
 ```bash
 yarn add -D webpack@3 extract-text-webpack-plugin@3
@@ -71,16 +71,18 @@ Webpack hot reloading you can attach to your own server [read mode...](https://g
 It helps to conveniently configure types of configs ([default](https://github.com/retyui/prestashop-1.7-webpack-3-hot-module-replacement/blob/master/themes/classic-demo-hot/_dev/_webpack/webpack.default.js) / [production](https://github.com/retyui/prestashop-1.7-webpack-3-hot-module-replacement/blob/master/themes/classic-demo-hot/_dev/_webpack/webpack.development.js) / [development](https://github.com/retyui/prestashop-1.7-webpack-3-hot-module-replacement/blob/master/themes/classic-demo-hot/_dev/_webpack/webpack.production.js))
 
 ```bash
-#### Install
+##### Install
 # Required
 yarn add -D browser-sync-dev-hot-webpack-plugin browser-sync@2 bs-html-injector@3
-yarn add -D webpack-dev-middleware@2 webpack-hot-middleware@2 webpack-merge
+yarn add -D webpack-dev-middleware@2 webpack-hot-middleware@2 webpack-merge cross-env
 
 # Optional
 yarn add -D  webpack-bundle-analyzer hard-source-webpack-plugin node-object-hash del
 ```
 
 #### Added [multi config](https://github.com/retyui/prestashop-1.7-webpack-3-hot-module-replacement/tree/master/themes/classic-demo-hot/_dev/_webpack) which is [combined depending on NODE_ENV](https://github.com/retyui/prestashop-1.7-webpack-3-hot-module-replacement/blob/master/themes/classic-demo-hot/_dev/webpack.config.js)
+
+#### [Updated scripts](https://github.com/retyui/prestashop-1.7-webpack-3-hot-module-replacement/blob/master/themes/classic-demo-hot/_dev/package.json#L7-L8) in `package.json`
 
 ### Other
 
