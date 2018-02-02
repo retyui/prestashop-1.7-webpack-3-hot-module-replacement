@@ -5,7 +5,7 @@ const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 const HardSourceWebpackPlugin = require("hard-source-webpack-plugin");
 const BrowserSyncHotPlugin = require("browser-sync-dev-hot-webpack-plugin");
 
-const {publicPath, port, open, themeFolderName} = require('./util.js');
+const {publicPath, browserSyncPort, browserSyncOpen, browserSyncTarget, themeFolderName} = require('./util.js');
 
 module.exports = {
 	output: {
@@ -22,11 +22,11 @@ module.exports = {
 		new HotModuleReplacementPlugin(),
 		new BrowserSyncHotPlugin({
 			browserSync: {
-				port,
-				open,
+				port: browserSyncPort,
+				open: browserSyncOpen,
 				reloadDelay: 500,
 				proxy: {
-					target: "http://prestashop.local/"
+					target: browserSyncTarget
 				},
 				plugins: [
 					{
