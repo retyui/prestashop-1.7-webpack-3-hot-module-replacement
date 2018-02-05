@@ -1,8 +1,6 @@
 # 🎉 PrestaShop Classic Theme Example hot module replacement, webpack.config.js - for webpack 3.x version.
 
-🔥 **Help attract attention! send a [tweet](https://twitter.com/jlongster) with an appeal to update the [monkey-hot-loader](https://github.com/jlongster/monkey-hot-loader) to the latest version of webpack** 💋
-
-Based on Prestashop 1.7.2.4
+Based on **Prestashop 1.7.2.4**
 
 ## Usage
 
